@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test:/\.(png|jpg)$/,
-        loader: 'url?limit=40000'
+        loader: 'url?limit=100'
       },
       {
         test: /\.jsx?$/,
@@ -51,7 +51,6 @@ module.exports = {
   devtool: 'eval-source-map',
   //添加我们的插件 会自动生成一个html文件
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
     new HtmlwebpackPlugin({
       title: 'Hello World app',
