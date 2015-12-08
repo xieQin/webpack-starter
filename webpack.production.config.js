@@ -20,13 +20,6 @@ module.exports = {
     path: BUILD_PATH,
     filename: '[name].[hash].js'
   },
-  //服务器配置
-  devServer: {
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    progress: true,
-  },
   module: {
     loaders: [
       {
@@ -48,7 +41,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map',
   //添加我们的插件 会自动生成一个html文件
   plugins: [
     new webpack.optimize.UglifyJsPlugin({minimize: true}),
